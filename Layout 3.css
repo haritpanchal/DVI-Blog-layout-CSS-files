@@ -1,0 +1,278 @@
+<style>
+/*************Advent Calendar 2017 - 9**************/
+/***********Vertical Timeline Blog Module***********/
+/*******************By Divi Soup********************/
+
+
+/*Add transition to the posts*/
+
+.ds-advent-9 {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+/*Size and position the featured image*/
+
+.ds-advent-9 .et_pb_post .entry-featured-image-url {
+    width: 35%;
+    margin: 0 30px 0 100px;
+    float: left;
+}
+
+
+/*Style and position the read more link*/
+
+.ds-advent-9 a.more-link {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    left: 100px;
+    top: 0;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+/*Add title padding*/
+
+.ds-advent-9 .et_pb_post .entry-title {
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+
+/*Style & position the date*/
+
+.ds-advent-9 .et_pb_post .published {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #dedede;
+    text-align: center;
+    bottom: 25%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+/*Add the background to the post content*/
+
+@media all and (min-width: 601px) {
+    .ds-advent-9 .et_pb_post:before {
+        content: '';
+        height: 100%;
+        background: #dedede;
+        position: absolute;
+        left: 45%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    /*Add the vertical line below the date*/
+    .ds-advent-9 .et_pb_post .published:before {
+        left: 50%;
+        top: 100%;
+        content: " ";
+        height: 200%;
+        width: 5px;
+        position: absolute;
+        background: #dedede;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+}
+
+
+/*Remove the vertical line from the last post*/
+
+.ds-advent-9 .et_pb_post:last-of-type .published:before {
+    display: none;
+}
+
+
+/*Add the side arrow to the date*/
+
+.ds-advent-9 .et_pb_post .published:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    border-color: transparent;
+    border-left-color: #dedede;
+    border-width: 15px;
+    margin-top: -15px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+/*Change the arrow colour on hover*/
+
+.ds-advent-9 .et_pb_post:hover .published:after {
+    border-left-color: #8ACAF8;
+}
+
+
+/*Change the date, vertical line and post content background colour on hover*/
+
+.ds-advent-9 .et_pb_post:hover .published,
+.ds-advent-9 .et_pb_post:hover .published:before,
+.ds-advent-9 .et_pb_post:hover:before {
+    background: #8ACAF8;
+}
+
+
+/*Show the readmore link on hover*/
+
+.ds-advent-9 .et_pb_post:hover a.more-link {
+    opacity: 1;
+}
+
+
+/*Limit the excerpt length*/
+
+.ds-advent-9 .et_pb_post .post-content p {
+    padding-right: 20px;
+    max-height: 6em;
+    overflow: hidden;
+}
+
+
+/*Adjust excerpt limit for smaller screens*/
+
+@media all and (max-width: 1079px) {
+    .ds-advent-9 .et_pb_post .post-content p {
+        max-height: 4.5em;
+    }
+}
+
+@media all and (max-width: 980px) {
+    .ds-advent-9 .et_pb_post .post-content p {
+        max-height: 3em;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .ds-advent-9 .et_pb_post .post-content p {
+        max-height: 0;
+    }
+}
+
+
+/*Rearrange content for mobiles*/
+
+@media all and (max-width: 600px) {
+    /*Add margin to top of module*/
+    .ds-advent-9 {
+        margin-top: 40px;
+    }
+    /*Set spacing between posts and add background colour*/
+    .ds-advent-9 .et_pb_post {
+        margin-bottom: 40%;
+        background: #dedede;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    /*Position and size the image*/
+    .ds-advent-9 .et_pb_post .entry-featured-image-url {
+        width: 100%;
+        margin: 0 0 15px 0;
+        border-bottom: 5px solid #fff;
+    }
+    /*Position and size the date*/
+    .ds-advent-9 .et_pb_post .published {
+        width: 100%;
+        padding: 10px;
+        top: -40px;
+        height: 40px;
+        bottom: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    /*Add some padding*/
+    .ds-advent-9 .et_pb_post .entry-title {
+        padding: 0 20px;
+    }
+    .ds-advent-9 .et_pb_post .post-content p {
+        max-height: 100%;
+        padding: 0 20px 20px;
+    }
+    /*Style and position the bottom arrow*/
+    .ds-advent-9 .et_pb_post .published:after {
+        top: calc(100% + 15px);
+        left: 50%;
+        border-top-color: #dedede;
+        border-left-color: transparent;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+    /*Change arrow colour on hover*/
+    .ds-advent-9 .et_pb_post:hover .published:after {
+        border-left-color: transparent;
+        border-top-color: #8ACAF8;
+    }
+    /*Position the read more link*/
+    .ds-advent-9 a.more-link {
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        top: 100%;
+        height: 40px;
+        margin-top: 5px;
+        background: #dedede;
+        opacity: 1;
+    }
+    /*Change post and read more background on hover*/
+    .ds-advent-9 .et_pb_post:hover,
+    .ds-advent-9 .et_pb_post:hover a.more-link {
+        background: #8ACAF8;
+    }
+}
+
+
+/*************Advent Calendar 2017 - 9**************/
+/********End - Vertical Timeline Blog Module********/
+/*******************By Divi Soup********************/
+</style>
