@@ -1,0 +1,270 @@
+<style>
+/*************Advent Calendar 2017 - 11**************/
+/*****Alternating Vertical Timeline Blog Module*****/
+/*******************By Divi Soup********************/
+
+
+/*Add hover transition*/
+
+.ds-advent-11 .et_pb_post * {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+/*Add content padding*/
+
+.ds-advent-11 .et_pb_post .entry-title {
+    padding: 30px 30px 0;
+}
+
+.ds-advent-11 .et_pb_post .post-content {
+    padding: 0 30px 30px
+}
+
+
+/*Position the image over the post content*/
+
+.ds-advent-11 .et_pb_post .entry-featured-image-url {
+    position: absolute;
+    background: #fff;
+    border: 5px solid #eee;
+    margin-bottom: 0;
+}
+
+
+/*Hide the image on hover*/
+
+.ds-advent-11 .et_pb_post:hover .entry-featured-image-url {
+    background: transparent;
+}
+
+.ds-advent-11 .et_pb_post:hover .entry-featured-image-url img {
+    opacity: 0;
+}
+
+
+/*Position and style the date*/
+
+.ds-advent-11 .published {
+    position: absolute;
+    left: calc(50% - 27.5px);
+    top: 25px;
+    width: 60px;
+    height: 60px;
+    padding-top: 5px;
+    background: #fff;
+    border: 5px solid #eee;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+/*Change date background colour on hover*/
+
+.ds-advent-11 .et_pb_post:hover .published {
+    background: #eee;
+}
+
+
+/*Add the vertical line*/
+
+.ds-advent-11 .et_pb_post:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 85px;
+    left: 50%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: #eee;
+    visibility: visible;
+}
+
+
+/*Remove the vertical line from the last post*/
+
+.ds-advent-11 .et_pb_post:last-of-type:after {
+    display: none;
+}
+
+
+/*Style the read more link*/
+
+.ds-advent-11 a.more-link {
+    text-transform: uppercase;
+    border: 5px solid #aaa;
+    color: #aaa;
+    font-weight: bold;
+    width: 130px;
+    text-align: center;
+    padding: .3em;
+    margin-top: 20px;
+}
+
+@media all and (min-width: 769px) {
+    /*Limit the width of the post content*/
+    .ds-advent-11 .et_pb_post .entry-featured-image-url,
+    .ds-advent-11 .et_pb_post .entry-title,
+    .ds-advent-11 .et_pb_post .post-content,
+    .ds-advent-11 .et_pb_post .post-meta {
+        width: 42.5%;
+    }
+    /*Move the even posts to the right*/
+    .ds-advent-11 .et_pb_post:nth-child(even) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-line-pack: end;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+    /*Add the post arrows*/
+    .ds-advent-11 .et_pb_post:nth-child(odd) .entry-featured-image-url:after,
+    .ds-advent-11 .et_pb_post:nth-child(odd) .entry-featured-image-url:before,
+    .ds-advent-11 .et_pb_post:nth-child(even) .entry-featured-image-url:after,
+    .ds-advent-11 .et_pb_post:nth-child(even) .entry-featured-image-url:before {
+        top: 50px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    .ds-advent-11 .et_pb_post:nth-child(odd) .entry-featured-image-url:after {
+        left: 100%;
+        border-left-color: #fff;
+        border-width: 20px;
+        margin-top: -20px;
+    }
+    .ds-advent-11 .et_pb_post:nth-child(odd) .entry-featured-image-url:before {
+        left: 100%;
+        border-left-color: #eee;
+        border-width: 27px;
+        margin-top: -27px;
+    }
+    .ds-advent-11 .et_pb_post:nth-child(even) .entry-featured-image-url:after {
+        right: 100%;
+        border-right-color: #fff;
+        border-width: 20px;
+        margin-top: -20px;
+    }
+    .ds-advent-11 .et_pb_post:nth-child(even) .entry-featured-image-url:before {
+        right: 100%;
+        border-right-color: #eee;
+        border-width: 27px;
+        margin-top: -27px;
+    }
+}
+
+
+/*Applies the arrows to the left on smaller screens*/
+
+.ds-advent-11 .et_pb_post .entry-featured-image-url:after,
+.ds-advent-11 .et_pb_post .entry-featured-image-url:before {
+    right: 100%;
+    top: 50px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ds-advent-11 .et_pb_post .entry-featured-image-url:after {
+    border-right-color: #fff;
+    border-width: 20px;
+    margin-top: -20px;
+}
+
+.ds-advent-11 .et_pb_post .entry-featured-image-url:before {
+    border-right-color: #eee;
+    border-width: 27px;
+    margin-top: -27px;
+}
+
+
+/*Limit the excerpt in smaller screens*/
+
+@media all and (max-width: 1280px) {
+    .ds-advent-11 .post-content p {
+        max-height: 6em;
+        overflow: hidden;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .ds-advent-11 .post-content p {
+        max-height: 3em;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .ds-advent-11 .post-content p {
+        max-height: 100%;
+    }
+    /*Add left margin to the posts on iPad and smaller*/
+    .ds-advent-11 .et_pb_post {
+        margin-left: 100px;
+        padding-bottom: 20%;
+    }
+    /*Move the date*/
+    .ds-advent-11 .published {
+        left: -100px;
+    }
+    /*Move the vertical line*/
+    .ds-advent-11 .et_pb_post:after {
+        left: -72.5px;
+    }
+}
+
+
+/*Limit the excerpt for mobile*/
+
+@media all and (max-width: 600px) {
+    .ds-advent-11 .post-content p {
+        max-height: 3em;
+    }
+}
+
+@media all and (max-width: 479px) {
+    .ds-advent-11 .post-content p {
+        max-height: 0;
+    }
+    /*Adjust post and content padding*/
+    .ds-advent-11 .et_pb_post {
+        padding-bottom: 5%;
+    }
+    .ds-advent-11 .et_pb_post .entry-title {
+        padding: 15px 15px 0;
+    }
+    .ds-advent-11 .et_pb_post .post-content {
+        padding: 0 15px 15px
+    }
+}
+
+
+/*************Advent Calendar 2017 - 11**************/
+/**End - Alternating Vertical Timeline Blog Module**/
+/*******************By Divi Soup********************/
+</style>
